@@ -16,7 +16,7 @@ public class SolutionTestF {
         City[] cityMapper = objectMapper.readValue(new
                 URL("https://raw.githubusercontent.com/lutangar/cities.json/master/cities.json"), City[].class);
         for(City city: cityMapper){
-            if (city.getCountry().equals("ID")&&levenshtein.distance(city.getName(),search)<=3.0){
+            if (city.getCountry().equals("ID")&&levenshtein.distance(city.getName(),search)<=5.0){
                 cities.add(city.getName());
             }
         }
